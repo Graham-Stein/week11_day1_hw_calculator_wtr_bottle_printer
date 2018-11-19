@@ -2,8 +2,6 @@ import static junit.framework.TestCase.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
-
 public class CalculatorTest {
 
     private Calculator calculator;
@@ -15,8 +13,6 @@ public class CalculatorTest {
 
     @Test
     public void hasAddNumber(){
-//        Calculator calculator;
-//        calculator = new Calculator();
         assertEquals(10, calculator.getAdd(5, 5));
     }
 
