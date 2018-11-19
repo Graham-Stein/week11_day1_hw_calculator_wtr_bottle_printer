@@ -24,7 +24,7 @@ public class Printer {
         if (sheets <= this.paper && sheets <= this.toner) {
 //        Add a method to print that takes in a number of pages to be printed and number of copies to print.
             this.paper -= sheets;
-            this.toner -= sheets;
+            useToner(sheets);
             //     If it runs it will reduce the
 // value of the paper left by number of copies * number of pages.
             return this.paper;
@@ -32,14 +32,14 @@ public class Printer {
         return -1;
     }
 
-    public int refill() {
+    public int setRefill() {
         //        Create a method to refill the printer paper.
         this.paper = this.paperCapacity;
         return this.paper;
     }
 
 
-    public int tonerLevel() {
+    public int getTonerLevel() {
         return this.toner;
     }
 

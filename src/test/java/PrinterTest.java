@@ -20,7 +20,7 @@ public class PrinterTest {
     @Test
     public void hasPrintFunction(){
         assertEquals(180, printer.Print(10, 2));
-        assertEquals(280, printer.tonerLevel());
+        assertEquals(280, printer.getTonerLevel());
     }
 
     @Test
@@ -30,12 +30,12 @@ public class PrinterTest {
 
     @Test
     public void hasRefillFunction(){
-        assertEquals(200, printer.refill());
+        assertEquals(200, printer.setRefill());
     }
 
     @Test
     public void hasToner(){
-        assertEquals(300, printer.tonerLevel());
+        assertEquals(300, printer.getTonerLevel());
     }
 
     @Test
