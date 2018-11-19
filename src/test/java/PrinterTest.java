@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertEquals;
+
 public class PrinterTest {
 
     private Printer printer;
@@ -11,7 +13,35 @@ public class PrinterTest {
     }
 
     @Test
-    public void has
+    public void hasPaper200(){
+        assertEquals(200, printer.paperInTray());
+    }
+
+    @Test
+    public void hasPrintFunction(){
+        assertEquals(180, printer.Print(10, 2));
+        assertEquals(280, printer.tonerLevel());
+    }
+
+    @Test
+    public void hasNoPrintIfNotEnoughPaper(){
+        assertEquals(-1, printer.Print(100, 3));
+    }
+
+    @Test
+    public void hasRefillFunction(){
+        assertEquals(200, printer.refill());
+    }
+
+    @Test
+    public void hasToner(){
+        assertEquals(300, printer.tonerLevel());
+    }
+
+    @Test
+    public void hasUseTonerFunction(){
+        assertEquals(200, printer.useToner(100));
+    }
 }
 
 
